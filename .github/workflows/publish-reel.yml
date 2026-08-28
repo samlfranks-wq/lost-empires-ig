@@ -5,7 +5,7 @@ name: Publish one Reel
 # that stops the same Reel going out twice.
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'      # :42 — deliberately offset from the YouTube repo's :17
+    - cron: '7,22,37,52 * * * *'   # every 15 min, offset from the other two repos
   workflow_dispatch:
 
 permissions:
