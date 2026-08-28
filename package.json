@@ -1,0 +1,12 @@
+{
+  "name": "ig-publisher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Publishes Reels to Instagram from a public video URL via the Graph API. No dependencies.",
+  "scripts": {
+    "check": "node check.js",
+    "post": "node post.js",
+    "queue": "node queue.js"
+  }
+}
