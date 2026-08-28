@@ -15,7 +15,7 @@ export function loadEnv(required = ['IG_USER_ID', 'IG_ACCESS_TOKEN']) {
   if (!existsSync(path)) {
     const fromProcess = {};
     for (const k of ['IG_USER_ID', 'IG_ACCESS_TOKEN', 'AUTH_MODE', 'GRAPH_VERSION']) {
-      if (process.env[k]) fromProcess[k] = process.env[k];
+      if (process.env[k]) fromProcess[k] = process.env[k].trim();  // a pasted secret can carry a trailing newline
     }
     const missingEnv = required.filter((k) => !fromProcess[k]);
     if (missingEnv.length) {
