@@ -1,0 +1,16 @@
+7 pending
+
+2026-08-26  trial=manual  cover=y  media=200 17.9MB  tags=5
+            The emperor's official historian secretly wrote a book calling him a demon. It surfaced a th
+2026-08-27  trial=manual  cover=y  media=200 14.2MB  tags=5
+            A surgeon practised on 75 poor men before he was allowed to operate on the King of France. N
+2026-08-28  trial=manual  cover=y  media=200 15.8MB  tags=5
+            They say the Empress of Rome took on 25 men in one night. That story is a poem, not history 
+2026-08-29  trial=manual  cover=y  media=200 16.6MB  tags=5
+            The night before her wedding, a medieval bride was told to put leeches inside herself. Not b
+2026-08-30  trial=manual  cover=y  media=200 14.8MB  tags=5
+            Some historians believe medieval women chose the back door rather than lose their virginity.
+2026-08-31  trial=manual  cover=y  media=200 18.4MB  tags=5
+            Everyone's talking about Bonnie Blue. Rome had one two thousand years ago, and she was the E
+2026-09-01  trial=manual  cover=n  media=200 21.1MB  tags=10
+            The Etruscans shared their wives at dinner — and the Greeks never got over it.
