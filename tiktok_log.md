@@ -275,3 +275,24 @@ accordion; it is not in the library.
   Trailerhead is the closest cleared equivalent. Original video volume 0 (there is no audio track at all).
 - is_aigc TRUE (nano_banana art). The ARCHIVAL variant of this deck was NOT posted to TikTok — Sam chose 2D only.
 - publish_id v_pub_url~v2.7677276408321951776
+
+## 2026-09-06 — Napoleon 1812 (Cowork map format, first map video on TikTok)
+
+| Field | Value |
+|---|---|
+| TikTok publish_id | v_pub_url~v2.7682526892200773665 |
+| File | `napoleon-1812/napoleon_v2.mp4` 58.0s, 1080x1920, 30fps, -14.1 LUFS |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/ea46f290-2c55-4e88-9221-d6217214e813.mp4 |
+| Music | "Invictus" — Trailerhead (6739976214024292354), vol 12 / original 100 |
+| Cover | baked frame 0 — NAPOLEON / 600,000 IN / 10,000 OUT; verified against the 1:1 grid crop |
+| is_aigc | **false** (standing rule) |
+| Also queued | IG trial reel 12 Sep 18:00, YouTube 10 Sep |
+
+Source render came from Cowork (`~/Downloads/LostEmpires_Napoleon1812Russia.mp4`, 62.5s). Three
+fixes before publishing, all on the file: cut the 4.4s Subscribe tail (its end card had the handle
+wrong as `@LOSTEMPIRES.AI`), rebuilt the frame-0 card (it said 100,000 OUT against the video's own
+closing stat of 10,000), and normalised -15.4 LUFS / -0.2 dBTP to -14.1 / -1.0.
+
+**Still wrong in the published cut, could not be fixed on the file:** yellow highlight words in the
+captions (white-only rule), and the opening line withholds the payload until 50.8s. Both need a
+Cowork re-render. Also the VO says the River Niemen as NAY-men; it is NEE-men.
