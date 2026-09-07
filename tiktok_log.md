@@ -296,3 +296,30 @@ closing stat of 10,000), and normalised -15.4 LUFS / -0.2 dBTP to -14.1 / -1.0.
 **Still wrong in the published cut, could not be fixed on the file:** yellow highlight words in the
 captions (white-only rule), and the opening line withholds the payload until 50.8s. Both need a
 Cowork re-render. Also the VO says the River Niemen as NAY-men; it is NEE-men.
+
+## 2026-09-07 — Roman concrete + Pompeii re-edit (Cowork renders)
+
+| | Roman concrete | Pompeii re-edit |
+|---|---|---|
+| publish_id | v_pub_url~v2.7682740423785285664 | v_pub_url~v2.7682740541187983392 |
+| File | `roman-concrete/concrete_v2.mp4` 22.4s | `roman-concrete/pompeii_v2.mp4` 35.7s |
+| Cover | ROMAN CONCRETE / HEALS ITSELF | POMPEII / WIVES BOUGHT GLADIATORS |
+| Music | "Invictus" — Trailerhead (6739976214024292354), vol 12 / original 100 | same |
+| is_aigc | false | false |
+| Also queued | IG 13 Sep, YT 11 Sep | IG 14 Sep, YT 12 Sep |
+
+Both from Cowork. Claude cut the "Follow for more Lost Empires" tails, added frame-0 title
+cards and normalised to -14 LUFS.
+
+**Published with known defects, on Sam's explicit instruction after being shown them:**
+- **Watermark reads `@lost.empires` on every frame. The account is `@lostempiresai`.** A blur-and-
+  redraw repair was tested and leaves a visible rectangle on flat backgrounds, so it shipped as-is.
+  Fix the watermark in the Cowork template — it affects every future render.
+- Yellow highlight words in the captions (MISTAKE, SEALS, PLAYGROUND) — white-only rule.
+- Roman concrete has a compositing fault: source images do not fill 1080x1920, leaving a hard seam
+  and black/grey bands, visible on frame 0.
+
+**Pompeii was already live on Instagram** (2 posts on 4 Sep: 1,073 and 297 views) and YouTube.
+It had never been on TikTok — the 2026-07-31 batch hit the daily cap before reaching it — so
+TikTok is the one clean platform for it. The IG re-post carries a new hook and cover
+("wives bought gladiators" rather than "Rome's playground") to reduce duplicate matching.
