@@ -323,3 +323,22 @@ cards and normalised to -14 LUFS.
 It had never been on TikTok — the 2026-07-31 batch hit the daily cap before reaching it — so
 TikTok is the one clean platform for it. The IG re-post carries a new hook and cover
 ("wives bought gladiators" rather than "Rome's playground") to reduce duplicate matching.
+
+## 2026-09-07 — Mongol empire (map pipeline, built locally)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7682797457331374113 (post 7682797722390383904) |
+| File | `_mongol_tiktok.mp4` 60.43s — cover baked over the first 1.4s |
+| Cover | THE MONGOLS / 4x BIGGER THAN ROME; verified against the 1:1 grid crop |
+| Music | "Invictus" — Trailerhead (6739976214024292354), vol 12 / original 100 |
+| is_aigc | false |
+| Also queued | IG 16 Sep (trial reel), YouTube 14 Sep |
+
+First video rendered end-to-end on Sam's own machine rather than in Cowork: Kokoro
+am_fenrir VO, leader portraits (Genghis, Batu) from public-domain Wikimedia images, and
+the FOLLOW end card with the click animation.
+
+**Rome timelapse is the pair to this and is NOT yet on TikTok.** Prepped and waiting at
+`Desktop/Lost Empires - map videos/TIKTOK TONIGHT - Rome (cover baked).mp4`, with a
+scheduled reminder set for 19:00 local on 7 Sep.
