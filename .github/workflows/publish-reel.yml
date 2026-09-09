@@ -5,7 +5,12 @@ name: Publish one Reel
 # that stops the same Reel going out twice.
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'   # every 15 min, offset from the other two repos
+  # Narrowed 2026-09-09. Running every 15 min around the clock was 8,670 runs a
+  # month across the three repos - past the Actions quota on private repos, and
+  # when that runs out GitHub silently stops scheduled workflows. One post a day
+  # only needs a window: 8 attempts over two hours still absorbs dropped ticks,
+  # and a missed day is picked up by the next window because the item stays due.
+    - cron: '1,16,31,46 17-18 * * *'   # posts 17:00Z
   workflow_dispatch:
 
 permissions:
@@ -45,14 +50,30 @@ jobs:
           set -o pipefail
           node queue.js --confirm | tee run.log
 
-      - name: Commit queue.json if something was published
+      # Read-only. Writes stats.json + stats_history.jsonl so the numbers are
+      # readable off this machine (Cowork can reach raw.githubusercontent.com
+      # but not graph.instagram.com). --max-age 50 means this workflow's 15-min
+      # cadence still only produces roughly one stats commit an hour.
+      - name: Collect analytics
+        continue-on-error: true          # analytics must never block publishing
+        shell: bash
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          AUTH_MODE: ${{ secrets.AUTH_MODE }}
+          GRAPH_VERSION: ${{ secrets.GRAPH_VERSION }}
+        run: node analytics.js --limit 30 --max-age 50
+
+      - name: Commit queue.json and stats
         run: |
-          if git diff --quiet queue.json; then
-            echo "Nothing due — queue.json unchanged."
+          for f in queue.json stats.json stats_history.jsonl; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing due and no new stats — nothing to commit."
             exit 0
           fi
           git config user.name  "lost-empires-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add queue.json
-          git commit -m "publish: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "publish/stats: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
