@@ -50,30 +50,14 @@ jobs:
           set -o pipefail
           node queue.js --confirm | tee run.log
 
-      # Read-only. Writes stats.json + stats_history.jsonl so the numbers are
-      # readable off this machine (Cowork can reach raw.githubusercontent.com
-      # but not graph.instagram.com). --max-age 50 means this workflow's 15-min
-      # cadence still only produces roughly one stats commit an hour.
-      - name: Collect analytics
-        continue-on-error: true          # analytics must never block publishing
-        shell: bash
-        env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          AUTH_MODE: ${{ secrets.AUTH_MODE }}
-          GRAPH_VERSION: ${{ secrets.GRAPH_VERSION }}
-        run: node analytics.js --limit 30 --max-age 50
-
-      - name: Commit queue.json and stats
+      - name: Commit queue.json if something was published
         run: |
-          for f in queue.json stats.json stats_history.jsonl; do
-            if [ -f "$f" ]; then git add "$f"; fi
-          done
-          if git diff --cached --quiet; then
-            echo "Nothing due and no new stats — nothing to commit."
+          if git diff --quiet queue.json; then
+            echo "Nothing due — queue.json unchanged."
             exit 0
           fi
           git config user.name  "lost-empires-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "publish/stats: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git add queue.json
+          git commit -m "publish: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
