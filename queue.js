@@ -34,9 +34,30 @@ if (!existsSync(QUEUE)) fail(`No queue.json at ${QUEUE}. See the format in this 
 
 const items = JSON.parse(readFileSync(QUEUE, 'utf8'));
 const now = new Date();
-const dueIndex = items.findIndex((it) => !it.posted && new Date(it.at) <= now);
+const confirm = process.argv.includes('--confirm');
 
-if (dueIndex === -1) {
+// Is the source actually fetchable? A Higgsfield CDN object that was never
+// confirmed goes 403 after about a day, and because a dead item stays due it
+// used to block every later day behind it. Checked HERE rather than reacting to
+// post.js's exit code, because that code cannot tell a dead URL apart from a
+// transient Instagram rejection - and skipping on a transient failure would
+// silently drop a post.
+async function sourceOk(url) {
+  if (!/^https?:\/\//i.test(url)) return true;          // local path, post.js handles it
+  try {
+    const r = await fetch(url, {headers: {Range: 'bytes=0-1023'}});
+    return r.ok || r.status === 206;
+  } catch {
+    return false;
+  }
+}
+
+const due = items
+  .map((it, idx) => ({it, idx}))
+  .filter(({it}) => !it.posted && new Date(it.at) <= now)
+  .sort((a, b) => new Date(a.it.at) - new Date(b.it.at));
+
+if (!due.length) {
   const next = items.filter((it) => !it.posted).sort((a, b) => new Date(a.at) - new Date(b.at))[0];
   console.log(next ? `Nothing due. Next: ${next.at} — ${next.url}` : 'Queue empty.');
   process.exit(0);
@@ -44,8 +65,6 @@ if (dueIndex === -1) {
 
 // One post per day — hard rule for this account. Burst posting on 27 Aug 2026
 // cost 30x reach (posts 3 and 4 got 4 and 6 views against 179 for post 2).
-// Without this, a missed day would drain the backlog at one per HOUR, because
-// the runner fires hourly and only ever checks "is this item due yet".
 const today = new Date().toISOString().slice(0, 10);
 const alreadyToday = items.find((it) => it.posted && it.posted.slice(0, 10) === today);
 if (alreadyToday) {
@@ -53,23 +72,52 @@ if (alreadyToday) {
   process.exit(0);
 }
 
-const item = items[dueIndex];
-const confirm = process.argv.includes('--confirm');
-console.log(`Due: ${item.at}\n  ${item.url}`);
+const skipped = [];
+let posted = false;
 
-const args = ['post.js', '--url', item.url, '--caption', item.caption ?? ''];
-if (item.cover) args.push('--cover', item.cover);
-if (item.trial) args.push('--trial', item.trial);
-if (confirm) args.push('--confirm');
-const res = spawnSync(process.execPath, args, {cwd: HERE, stdio: 'inherit'});
+for (const {it, idx} of due) {
+  console.log(`Due: ${it.at}\n  ${it.url}`);
 
-if (!confirm) process.exit(0);
+  const badUrl   = !(await sourceOk(it.url));
+  const badCover = it.cover ? !(await sourceOk(it.cover)) : false;
+  if (badUrl || badCover) {
+    it.skips = (it.skips || 0) + 1;
+    it.lastError = `${new Date().toISOString().slice(0, 16)}Z unfetchable ${badUrl ? 'url' : 'cover'}`;
+    skipped.push(it);
+    console.error(`SKIPPED ${it.at} — ${badUrl ? 'video' : 'cover'} URL is unfetchable; this one stays queued.`);
+    continue;
+  }
 
-if (res.status === 0) {
-  items[dueIndex] = {...item, posted: new Date().toISOString()};
-  writeFileSync(QUEUE, JSON.stringify(items, null, 2) + '\n');
-  console.log('✔ Marked as posted in queue.json');
-} else {
-  console.error('✖ Publish failed — leaving the item in the queue to retry next run.');
+  const args = ['post.js', '--url', it.url, '--caption', it.caption ?? ''];
+  if (it.cover) args.push('--cover', it.cover);
+  if (it.trial) args.push('--trial', it.trial);
+  if (confirm) args.push('--confirm');
+  const res = spawnSync(process.execPath, args, {cwd: HERE, stdio: 'inherit'});
+
+  if (!confirm) process.exit(0);
+
+  if (res.status === 0) {
+    items[idx] = {...it, posted: new Date().toISOString()};
+    posted = true;
+    console.log('✔ Marked as posted in queue.json');
+  } else {
+    // NOT skipped: the source was fine, so this is Instagram's side. Leave it
+    // due and retry next run rather than stepping over real content.
+    console.error('✖ Publish failed — leaving the item in the queue to retry next run.');
+    if (skipped.length) writeFileSync(QUEUE, JSON.stringify(items, null, 2) + '\n');
+    process.exit(1);
+  }
+  break;
+}
+
+if (posted || skipped.length) writeFileSync(QUEUE, JSON.stringify(items, null, 2) + '\n');
+
+if (skipped.length) {
+  console.error(`\n${skipped.length} item(s) skipped for an unfetchable source:`);
+  for (const it of skipped) console.error(`  ${it.at}  (skipped ${it.skips}x)  ${it.lastError}`);
+  console.error('Re-upload the asset and repoint queue.json; they post on the next run.');
+}
+if (!posted && skipped.length && confirm) {
+  console.error('Everything due has a broken source URL. Nothing was posted.');
   process.exit(1);
 }
