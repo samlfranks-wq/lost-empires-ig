@@ -45,8 +45,22 @@ const confirm = process.argv.includes('--confirm');
 async function sourceOk(url) {
   if (!/^https?:\/\//i.test(url)) return true;          // local path, post.js handles it
   try {
-    const r = await fetch(url, {headers: {Range: 'bytes=0-1023'}});
-    return r.ok || r.status === 206;
+    // Ask for the whole object, the way Instagram will. The old check asked for
+    // `bytes=0-1023` and accepted the 206, which a dead CDN object answers
+    // happily while a full GET of the same url returns 403.
+    //
+    // Honest limit, measured 2026-09-14: this does NOT catch every bad asset.
+    // The Pompeii object that Instagram rejected answers 200 to Node's fetch
+    // and 403 to curl at the same moment - CloudFront serves an unconfirmed
+    // upload inconsistently across edges, so no client-side probe can promise
+    // Instagram will draw a good one. The durable fix is upstream: never queue
+    // a url whose media_confirm did not return "uploaded".
+    const r = await fetch(url, {method: 'GET'});
+    if (!r.ok) return false;
+    const type = r.headers.get('content-type') || '';
+    const len  = Number(r.headers.get('content-length') || 0);
+    r.body?.cancel();                                    // headers are enough; drop the stream
+    return /^(video|image)\//.test(type) && len > 100_000;
   } catch {
     return false;
   }
