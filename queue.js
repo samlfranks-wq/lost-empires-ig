@@ -83,6 +83,13 @@ const today = new Date().toISOString().slice(0, 10);
 const alreadyToday = items.find((it) => it.posted && it.posted.slice(0, 10) === today);
 if (alreadyToday) {
   console.log(`Already posted today (${alreadyToday.at}). One per day — stopping.`);
+  // Do not let a blocked queue read as a healthy run - see the same guard in
+  // yt-publisher/queue.js. A green tick on a no-op is how four days of missed
+  // posts went unnoticed.
+  if (due.length) {
+    console.log(`::warning::${due.length} item(s) due but BLOCKED by the one-per-day guard; oldest ${due[0].it.at}.`);
+    console.log('::warning::This backlog cannot self-clear - rebase the queue dates.');
+  }
   process.exit(0);
 }
 
