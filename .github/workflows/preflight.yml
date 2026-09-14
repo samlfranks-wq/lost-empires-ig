@@ -1,0 +1,41 @@
+name: Queue preflight
+
+# Looks ahead so a broken asset is news the day before, not a missed reel.
+#
+# publish-reel.yml only discovers a dead token or an unfetchable CDN link at
+# 17:00Z with the post already due, and Instagram reports a bad video as an
+# opaque container status of "ERROR" that names no cause. On 2026-09-14 that
+# cost a day's post and the only signal was a red run nobody was watching.
+#
+# Daily rather than weekly (unlike the YouTube side): the assets here are
+# Higgsfield CDN objects that go unfetchable on their own, so a Monday-only
+# check would miss anything that died on a Tuesday. The repo is public, so the
+# Actions minutes are free — this is not the hourly workflow_dispatch that blew
+# the quota in September, and the publish windows are untouched.
+#
+# It publishes nothing and commits nothing.
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00Z daily — five hours before the publish window
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Check credentials and every queued source URL
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          AUTH_MODE: ${{ secrets.AUTH_MODE }}
+          GRAPH_VERSION: ${{ secrets.GRAPH_VERSION }}
+        run: node preflight.js --days 7
