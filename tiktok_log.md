@@ -342,3 +342,28 @@ the FOLLOW end card with the click animation.
 **Rome timelapse is the pair to this and is NOT yet on TikTok.** Prepped and waiting at
 `Desktop/Lost Empires - map videos/TIKTOK TONIGHT - Rome (cover baked).mp4`, with a
 scheduled reminder set for 19:00 local on 7 Sep.
+
+## 2026-09-15 — cross-posts that had never been on TikTok
+
+Found by auditing real `tiktok_publish` calls (59 distinct videos) against both
+publisher queues. Every map video was already up; these two were Sam's own
+YouTube shorts, cross-posted to Instagram on 10/11 Sep and never to TikTok.
+
+| | Roman leg day | Bronze Age collapse |
+|---|---|---|
+| publish_id | v_pub_url~v2.7685669589216184352 | v_pub_url~v2.7685669995732617248 |
+| Duration | 30.1s (inside the 24-32s TikTok band) | 42.2s |
+| Cover | frame 0 already a full-opacity title card | **frame 0 was BLACK** — cover baked on as 0.33s |
+| is_aigc | false | false |
+| Music | none — both carry their own VO | none |
+
+**Roman leg day ships with YELLOW hook text** ("ROMAN GYM GIRL", "YEARS OLD"),
+against the white-only rule. Not fixed: it is already published on IG and
+YouTube in that form, and re-rendering shipped video for a cosmetic defect is
+its own standing rule. Fix it at the source if this format gets rebuilt.
+
+**Higgsfield `media_confirm` was down 14-15 Sep** — five consecutive failures
+across two days and two fresh uploads. It recovered on the morning of the 15th.
+While it was down an unconfirmed object was served inconsistently by CloudFront
+(200 from one edge, 403 from another), which is what Instagram rejected on the
+14th. Pompeii was rehosted on catbox to get round it.
