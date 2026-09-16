@@ -470,3 +470,23 @@ satellite plate and gives the phase correlator nothing to lock on, so the meter
 under-reads on this geography.
 
 Spend: ~0.6cr VO + ~4.5cr stickers.
+
+## 2026-09-16 — The Anglo-Saxons come to Britain (Alexander tier, 120 px/deg plate, collision-checked)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7686260089627510816 |
+| File | `map-pipeline/saxons/saxons_FINAL.mp4` 76.5s, 3.0 Mbps, -14.0 LUFS, cover held 1.0s |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/710675b5-892d-4630-a285-25c68d52e1c5.mp4 (confirmed) |
+| Cover | baked frame 0-29 — Saxon round-shield badge, THE ENGLISH / AREN'T FROM ENGLAND |
+| Caption | The English are not from England. They came by boat from Germany and Denmark and took the island in 200 years. #history #anglosaxons #england #map |
+| Music | none — own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube |
+
+Third of the night's three builds (Sparta, Germania, Saxons). Motion p90 7.81px, the
+highest of the three - the North Sea crossings are long flights. Germania's FIXED
+master for IG/YT is `germania_FINAL_v2.mp4` (gofile.io/d/5SF10VTe); the TikTok cut
+is the earlier file.
+
+Spend: ~0.6cr VO + ~4.5cr stickers.
