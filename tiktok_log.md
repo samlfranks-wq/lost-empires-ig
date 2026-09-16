@@ -448,3 +448,25 @@ is the file to use for IG/YT. Built in the same session as Sparta and the Anglo-
 the mechanics are in map-pipeline/CLAUDE.md ("Three builds at once").
 
 Spend: ~0.6cr VO + ~4.5cr stickers.
+
+## 2026-09-16 — Why Sparta Collapsed (Alexander tier, 120 px/deg plate, collision-checked)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7686255796602030112 |
+| File | `map-pipeline/sparta/sparta_FINAL.mp4` 77.3s, 2.0 Mbps, -14.0 LUFS, cover held 1.0s |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/61b047a8-58d6-4792-a25f-20a42d78316c.mp4 (confirmed) |
+| Cover | baked frame 0-29 — lambda shield badge, SPARTA / RAN OUT OF SPARTANS |
+| Caption | Sparta beat Athens, ruled Greece, and was finished in 30 years. It ran out of Spartans. #history #sparta #ancientgreece #map |
+| Music | none — own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube |
+
+First video through `check_sprites.py` (Sam: "make sure animations dont overlap badly
+with map text") - the first pass found 13 sprite-on-label overlaps that every other
+gate had passed. First video with the one-second cover hold (Sam wants to pick the
+YouTube frame from the first second). Motion p90 1.41px: the Aegean is black on the
+satellite plate and gives the phase correlator nothing to lock on, so the meter
+under-reads on this geography.
+
+Spend: ~0.6cr VO + ~4.5cr stickers.
