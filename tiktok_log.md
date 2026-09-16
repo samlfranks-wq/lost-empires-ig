@@ -368,6 +368,18 @@ While it was down an unconfirmed object was served inconsistently by CloudFront
 (200 from one edge, 403 from another), which is what Instagram rejected on the
 14th. Pompeii was rehosted on catbox to get round it.
 
+## 2026-09-14/15 — four posts that were published but never logged here
+
+Backfilled 16 Sep from the session transcripts (real `tiktok_publish` calls). All
+`is_aigc` false, no music, own VO. Found while auditing the queue for TikTok gaps.
+
+| Date (UTC) | Video | publish_id | Also on |
+|---|---|---|---|
+| 14 Sep 14:10 | Celtic Europe (map pipeline, celtic_base) | v_pub_url~v2.7685392870240634912 | IG 27 Sep, YT 27 Sep |
+| 14 Sep 15:08 | US territorial expansion (political basemap, reworked camera) | v_pub_url~v2.7685408022381955104 | IG 24 Sep, YT 24 Sep |
+| 15 Sep 08:51 | Ottoman Empire 1299-1923 (map pipeline) | v_pub_url~v2.7685681431926016033 | IG 29 Sep, YT 28 Sep |
+| 15 Sep 21:37 | Spartan school / agoge (Sam's YT short) | v_pub_url~v2.7685878707663423520 | IG 9 Sep, YT (Sam) |
+
 ## 2026-09-16 — Alexander the Great (map pipeline, first "Google Earth" tier build)
 
 | Field | Value |
