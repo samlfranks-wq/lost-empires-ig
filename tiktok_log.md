@@ -427,3 +427,24 @@ cap went in. And never place a label at a leg's endpoint - that is where the rid
 parks. Both are in map-pipeline/CLAUDE.md.
 
 Spend: ~0.6cr VO + ~4.5cr stickers.
+
+## 2026-09-16 — Rome vs Germania (Alexander tier; first build on the 120 px/deg plate)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7686251401118320672 |
+| File | `map-pipeline/germania/germania_FINAL.mp4` 76.4s, 3.0 Mbps, -14.0 LUFS |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/486dba74-90bc-4434-abac-733ac2661c46.mp4 (confirmed) |
+| Cover | baked frame 0 — SPQR badge, ROME / NEVER TOOK GERMANY |
+| Caption | Rome took Gaul in 8 years. It spent 30 on Germania, lost three legions in a forest, and never tried again. #history #rome #germania #map |
+| Music | none — own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube |
+
+Shipped with three cosmetic overlaps (THE ELBE label under the rider for ~3s, TEUTOBURG
+FOREST label behind the ambush sprites, Arminius sprite over the FOLLOW card) because
+the no-re-render rule says cosmetics don't hold a post. The re-render with those fixed
+is the file to use for IG/YT. Built in the same session as Sparta and the Anglo-Saxons;
+the mechanics are in map-pipeline/CLAUDE.md ("Three builds at once").
+
+Spend: ~0.6cr VO + ~4.5cr stickers.
