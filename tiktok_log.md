@@ -367,3 +367,24 @@ across two days and two fresh uploads. It recovered on the morning of the 15th.
 While it was down an unconfirmed object was served inconsistently by CloudFront
 (200 from one edge, 403 from another), which is what Instagram rejected on the
 14th. Pompeii was rehosted on catbox to get round it.
+
+## 2026-09-16 — Alexander the Great (map pipeline, first "Google Earth" tier build)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7685951699881789472 |
+| File | `map-pipeline/alexander/alexander_FINAL.mp4` 71.0s, 3.3 Mbps, -14.0 LUFS |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/5031ca58-943a-4425-9b95-877f82d2c63c.mp4 (confirmed) |
+| Cover | baked frame 0 — Vergina Sun badge, ALEXANDER THE GREAT / NEVER LOST A BATTLE |
+| Caption | Alexander the Great never lost a battle and built the largest empire the world had seen. He was dead at 32. #history #alexanderthegreat |
+| Music | none — own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube |
+
+First build with the satellite plate (NASA Blue Marble), the fly-to camera
+(pull-back / bank / push-in transits, 10 deg tilt), and animated sprite characters
+(Alexander rides the route tip; Darius flees at Issus and Gaugamela; the army sits
+down at the Beas). Motion p90 12.69px - inside Knowledgia's band for the first time.
+Mechanics and the traps hit are in `map-pipeline/CLAUDE.md`.
+
+Spend: ~0.6cr VO (Alden, one take) + ~4.5cr for three nano_banana stickers.
