@@ -379,7 +379,7 @@ While it was down an unconfirmed object was served inconsistently by CloudFront
 | Caption | Alexander the Great never lost a battle and built the largest empire the world had seen. He was dead at 32. #history #alexanderthegreat |
 | Music | none — own VO and score |
 | is_aigc | false (standing rule) |
-| Also queued | NOT yet on IG or YouTube |
+| Also queued | IG 2 Oct 17:00Z, YouTube 1 Oct 18:00Z (queued 16 Sep) |
 
 First build with the satellite plate (NASA Blue Marble), the fly-to camera
 (pull-back / bank / push-in transits, 10 deg tilt), and animated sprite characters
@@ -400,7 +400,7 @@ Spend: ~0.6cr VO (Alden, one take) + ~4.5cr for three nano_banana stickers.
 | Caption | Hannibal marched 37 elephants over the Alps to attack Rome. He won every battle for 15 years and never took the city. #history #hannibal |
 | Music | none — own VO and score |
 | is_aigc | false (standing rule) |
-| Also queued | NOT yet on IG or YouTube (nor is Alexander) |
+| Also queued | IG 3 Oct 17:00Z, YouTube 2 Oct 18:00Z (queued 16 Sep) |
 
 Sam set the Alexander cut as the template this morning ("i love it, set this style as
 the new template moving forward"). Hannibal is the first build under that default:
