@@ -388,3 +388,30 @@ down at the Beas). Motion p90 12.69px - inside Knowledgia's band for the first t
 Mechanics and the traps hit are in `map-pipeline/CLAUDE.md`.
 
 Spend: ~0.6cr VO (Alden, one take) + ~4.5cr for three nano_banana stickers.
+
+## 2026-09-16 — Hannibal (second Alexander-tier build; the tier is now the default)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7685960726078588961 |
+| File | `map-pipeline/hannibal/hannibal_FINAL.mp4` 80.7s, 2.9 Mbps, -14.0 LUFS |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/e3357afa-0a6f-4165-af76-b4c1875b605e.mp4 (confirmed) |
+| Cover | baked frame 0 — sign of Tanit badge, HANNIBAL / NEVER TOOK ROME |
+| Caption | Hannibal marched 37 elephants over the Alps to attack Rome. He won every battle for 15 years and never took the city. #history #hannibal |
+| Music | none — own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube (nor is Alexander) |
+
+Sam set the Alexander cut as the template this morning ("i love it, set this style as
+the new template moving forward"). Hannibal is the first build under that default:
+satellite plate, fly-to camera, 10 deg tilt, route as geometry, three stickers
+(Hannibal rides the elephant over the Alps; a legionary runs at each battle; Scipio
+waits at Zama). Motion p90 3.59px - lower than Alexander's 12.69 because the
+geography is compact and the flights short, not a camera regression.
+
+New trap for the template: the fly-to pull-back must be capped on BOTH axes. This
+plate is 38 deg wide and the long flights clamped ~3 deg sideways until a longitude
+cap went in. And never place a label at a leg's endpoint - that is where the rider
+parks. Both are in map-pipeline/CLAUDE.md.
+
+Spend: ~0.6cr VO + ~4.5cr stickers.
