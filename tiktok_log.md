@@ -439,7 +439,7 @@ Spend: ~0.6cr VO + ~4.5cr stickers.
 | Caption | Rome took Gaul in 8 years. It spent 30 on Germania, lost three legions in a forest, and never tried again. #history #rome #germania #map |
 | Music | none — own VO and score |
 | is_aigc | false (standing rule) |
-| Also queued | NOT yet on IG or YouTube |
+| Also queued | IG 5 Oct 18:00 London, YouTube 4 Oct 19:00 London - the FIXED master germania_FINAL_v2.mp4, not this cut (queued 17 Sep) |
 
 Shipped with three cosmetic overlaps (THE ELBE label under the rider for ~3s, TEUTOBURG
 FOREST label behind the ambush sprites, Arminius sprite over the FOLLOW card) because
@@ -460,7 +460,7 @@ Spend: ~0.6cr VO + ~4.5cr stickers.
 | Caption | Sparta beat Athens, ruled Greece, and was finished in 30 years. It ran out of Spartans. #history #sparta #ancientgreece #map |
 | Music | none — own VO and score |
 | is_aigc | false (standing rule) |
-| Also queued | NOT yet on IG or YouTube |
+| Also queued | IG 4 Oct 18:00 London, YouTube 3 Oct 19:00 London (queued 17 Sep) |
 
 First video through `check_sprites.py` (Sam: "make sure animations dont overlap badly
 with map text") - the first pass found 13 sprite-on-label overlaps that every other
@@ -475,14 +475,14 @@ Spend: ~0.6cr VO + ~4.5cr stickers.
 
 | Field | Value |
 |---|---|
-| publish_id | v_pub_url~v2.7686260089627510816 |
+| publish_id | v_pub_url~v2.7686440783230076960 (REPOST 17 Sep 10:57 London; the 16 Sep post v_pub_url~v2.7686260089627510816 was deleted by Sam - three went out in 40 minutes) |
 | File | `map-pipeline/saxons/saxons_FINAL.mp4` 76.5s, 3.0 Mbps, -14.0 LUFS, cover held 1.0s |
 | CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/710675b5-892d-4630-a285-25c68d52e1c5.mp4 (confirmed) |
 | Cover | baked frame 0-29 — Saxon round-shield badge, THE ENGLISH / AREN'T FROM ENGLAND |
 | Caption | The English are not from England. They came by boat from Germany and Denmark and took the island in 200 years. #history #anglosaxons #england #map |
 | Music | none — own VO and score |
 | is_aigc | false (standing rule) |
-| Also queued | NOT yet on IG or YouTube |
+| Also queued | IG 6 Oct 18:00 London, YouTube 5 Oct 19:00 London (queued 17 Sep) |
 
 Third of the night's three builds (Sparta, Germania, Saxons). Motion p90 7.81px, the
 highest of the three - the North Sea crossings are long flights. Germania's FIXED
