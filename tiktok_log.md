@@ -490,3 +490,21 @@ master for IG/YT is `germania_FINAL_v2.mp4` (gofile.io/d/5SF10VTe); the TikTok c
 is the earlier file.
 
 Spend: ~0.6cr VO + ~4.5cr stickers.
+
+## 2026-09-17 — Alexander and Hannibal: fixed masters built for the IG/YT queue
+
+Sam: "fix and re-render alexander and hannibal for the queue." Both failed
+`check_sprites.py` when it was run retroactively (Alexander 3 overlaps, Hannibal 12 -
+Scipio stood on CARTHAGE for 15.4s). Fixed by moving labels off leg endpoints
+(PELLA, ISSUS, INDUS on Alexander; THE ALPS, TREBIA, TRASIMENE, CANNAE, ROME,
+CARTHAGE on Hannibal) and shortening Scipio's Zama hold so he is gone before the
+closing pull-back. Both re-rendered, one-second cover baked, decode clean, -14.0 LUFS.
+
+Per the no-re-render rule the TikTok posts (already live, `v_pub_url~v2.7685952714328526113`
+and `v_pub_url~v2.7685960726078588961`) are untouched. The IG/YT queue entries were
+swapped to the new CDN URLs:
+
+| | Old (TikTok, unchanged) | New (queue, fixed) |
+|---|---|---|
+| Alexander | .../5031ca58-943a-4425-9b95-877f82d2c63c.mp4 | .../009580c6-52b6-4082-959c-39f69f4badc9.mp4 |
+| Hannibal | .../e3357afa-0a6f-4165-af76-b4c1875b605e.mp4 | .../47bf7732-7d82-4d53-a0ad-74bd128fa890.mp4 |
