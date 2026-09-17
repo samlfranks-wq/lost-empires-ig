@@ -508,3 +508,36 @@ swapped to the new CDN URLs:
 |---|---|---|
 | Alexander | .../5031ca58-943a-4425-9b95-877f82d2c63c.mp4 | .../009580c6-52b6-4082-959c-39f69f4badc9.mp4 |
 | Hannibal | .../e3357afa-0a6f-4165-af76-b4c1875b605e.mp4 | .../47bf7732-7d82-4d53-a0ad-74bd128fa890.mp4 |
+
+## 2026-09-18 — Why Didn't Japan Attack the Soviet Union (new build, widest plate yet)
+
+| Field | Value |
+|---|---|
+| publish_id | v_pub_url~v2.7686646976397608993 |
+| File | `map-pipeline/nomonhan/nomonhan_FINAL.mp4` 94.5s, 3.1 Mbps, -14.0 LUFS, cover held 1.0s |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/0422961f-f168-46b9-809f-cd4c7d41e910.mp4 (confirmed) |
+| Cover | baked frame 0-29 - Japan+Soviet two-flag badge, JAPAN / NEVER ATTACKED THE USSR |
+| Caption | Japan built an army to invade the Soviet Union. It attacked once, lost in six weeks, and never tried again. #history #japan #ww2 #map |
+| Music | none - own VO and score |
+| is_aigc | false (standing rule) |
+| Also queued | NOT yet on IG or YouTube |
+
+Sam: "prepare a new map video focused on ww2 themes." Picked the single highest-scoring
+unbuilt Knowledgia topic (4.5M) that also sidesteps the WW2 insignia rule entirely by
+construction - Japan and the USSR, no German content anywhere. Widest plate the pipeline
+has built (Manchuria to Moscow, 123 deg at 60px/deg). The closing Siberian-divisions-to-
+Moscow journey is three separate flights rather than one, because Moscow's latitude
+only allows an ~20 deg camera and a single 82-degree leap would have blown the vertical
+clamp. Passed check_sprites.py after five label moves.
+
+Caveat, disclosed rather than hidden: the Blue Marble source photo is a December
+composite, so the whole plate shows snow cover even in the May/August 1939 beats,
+which were fought in summer. Accurate for the December 1941 payoff, not season-true
+for the earlier ones.
+
+Also found while checking for TikTok gaps: an old-tier WW2 Germany video
+(`ww2/ww2_tiktok.mp4`, built 7 Sep) was never posted. Frames are clean of insignia but
+it runs 63.5s, well past the 24-32s band that performs here, and predates the current
+tier. NOT posted - flagged to Sam instead of recut.
+
+Spend: ~0.6cr VO + ~4.5cr stickers.
