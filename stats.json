@@ -1,44 +1,44 @@
 {
   "platform": "instagram",
-  "generated_at": "2026-09-19T21:27:47.451Z",
+  "generated_at": "2026-09-19T23:21:47.412Z",
   "account": {
     "id": "17841426662257385",
     "username": "lostempiresai",
     "account_type": "BUSINESS",
     "followers": 2916,
     "following": 67,
-    "media_count": 47
+    "media_count": 48
   },
   "account_28d": {
-    "reach": 32754,
-    "views": 46231,
+    "reach": 33574,
+    "views": 47126,
     "profile_views": 131,
     "accounts_engaged": 639,
-    "total_interactions": 946,
+    "total_interactions": 947,
     "follows_and_unfollows": null
   },
   "totals": {
     "posts": 30,
-    "views": 34350,
-    "reach": 28292,
-    "inter": 591,
-    "likes": 364,
+    "views": 34596,
+    "reach": 28662,
+    "inter": 592,
+    "likes": 365,
     "comments": 15,
     "shares": 92,
     "saves": 115,
-    "eng_rate": 2.09,
-    "view_per_reach": 1.214
+    "eng_rate": 2.07,
+    "view_per_reach": 1.207
   },
   "posts": [
     {
       "id": "18186344191405427",
       "posted_at": "2026-09-19T17:12:34+0000",
-      "age_h": 4.25,
+      "age_h": 6.15,
       "type": "REELS",
       "hook": "Germany took most of Europe in a year. Nobody stopped it while stopping it was cheap.",
       "permalink": "https://www.instagram.com/reel/DdehIaeEXrB/",
-      "views": 1260,
-      "reach": 977,
+      "views": 1388,
+      "reach": 1277,
       "inter": 7,
       "likes": 6,
       "comments": 0,
@@ -48,14 +48,14 @@
     {
       "id": "18109653644154500",
       "posted_at": "2026-09-18T17:39:55+0000",
-      "age_h": 27.8,
+      "age_h": 29.7,
       "type": "REELS",
       "hook": "Muslims ruled Spain for nearly eight hundred years. Then every last one was expelled.",
       "permalink": "https://www.instagram.com/reel/Ddb_ehmCjYD/",
-      "views": 3746,
-      "reach": 3340,
-      "inter": 30,
-      "likes": 20,
+      "views": 3860,
+      "reach": 3407,
+      "inter": 31,
+      "likes": 21,
       "comments": 0,
       "shares": 1,
       "saves": 8
@@ -63,11 +63,11 @@
     {
       "id": "18020973140713022",
       "posted_at": "2026-09-17T20:11:04+0000",
-      "age_h": 49.28,
+      "age_h": 51.18,
       "type": "REELS",
       "hook": "Spain swallowed almost every kingdom in Iberia. It never kept Portugal.",
       "permalink": "https://www.instagram.com/reel/DdZsAWVjs8m/",
-      "views": 1243,
+      "views": 1244,
       "reach": 1136,
       "inter": 16,
       "likes": 11,
@@ -78,7 +78,7 @@
     {
       "id": "18095155433531370",
       "posted_at": "2026-09-16T20:00:56+0000",
-      "age_h": 73.45,
+      "age_h": 75.35,
       "type": "REELS",
       "hook": "Rome took five hundred years to build its empire. The Mongols took fifty, and theirs was f",
       "permalink": "https://www.instagram.com/reel/DdXGApYgSLj/",
@@ -93,12 +93,12 @@
     {
       "id": "17893741158608422",
       "posted_at": "2026-09-15T20:09:57+0000",
-      "age_h": 97.3,
+      "age_h": 99.2,
       "type": "REELS",
       "hook": "Rome in 500 BC was one city on a river. Six hundred years later it stopped growing forever",
       "permalink": "https://www.instagram.com/reel/DdUiQP0FAij/",
-      "views": 3165,
-      "reach": 2807,
+      "views": 3168,
+      "reach": 2810,
       "inter": 46,
       "likes": 30,
       "comments": 0,
@@ -108,7 +108,7 @@
     {
       "id": "17907852624545500",
       "posted_at": "2026-09-13T19:14:39+0000",
-      "age_h": 146.22,
+      "age_h": 148.12,
       "type": "REELS",
       "hook": "Roman concrete gets stronger with age. Ours cracks in fifty years.",
       "permalink": "https://www.instagram.com/reel/DdPSX3BCQRG/",
@@ -123,7 +123,7 @@
     {
       "id": "18339674119281731",
       "posted_at": "2026-09-12T19:04:42+0000",
-      "age_h": 170.38,
+      "age_h": 172.28,
       "type": "REELS",
       "hook": "600,000 men marched into Russia with Napoleon. Ten thousand marched out. He won almost eve",
       "permalink": "https://www.instagram.com/reel/DdMsZ2MlI_0/",
@@ -138,7 +138,7 @@
     {
       "id": "17967791439154026",
       "posted_at": "2026-09-11T19:25:28+0000",
-      "age_h": 194.04,
+      "age_h": 195.94,
       "type": "REELS",
       "hook": "The Fall of the Bronze Age Empires",
       "permalink": "https://www.instagram.com/reel/DdKKBNbDwUT/",
@@ -153,7 +153,7 @@
     {
       "id": "18118643845945476",
       "posted_at": "2026-09-11T19:25:01+0000",
-      "age_h": 194.05,
+      "age_h": 195.95,
       "type": "REELS",
       "hook": "The Fall of the Bronze Age Empires",
       "permalink": "https://www.instagram.com/reel/DdKJ9e9G6nI/",
@@ -168,7 +168,7 @@
     {
       "id": "17947028175054644",
       "posted_at": "2026-09-10T19:29:17+0000",
-      "age_h": 217.98,
+      "age_h": 219.88,
       "type": "REELS",
       "hook": "1,700 years ago, Roman women had leg day too 💪🏛️",
       "permalink": "https://www.instagram.com/reel/DdHlqZ7jhUv/",
@@ -183,7 +183,7 @@
     {
       "id": "18126778243755388",
       "posted_at": "2026-09-09T17:01:30+0000",
-      "age_h": 244.44,
+      "age_h": 246.34,
       "type": "REELS",
       "hook": "Could YOU survive Spartan school? 🛡️",
       "permalink": "https://www.instagram.com/reel/DdEv8xAEo_e/",
@@ -198,7 +198,7 @@
     {
       "id": "18087330701691060",
       "posted_at": "2026-09-08T17:01:32+0000",
-      "age_h": 268.44,
+      "age_h": 270.34,
       "type": "REELS",
       "hook": "If a goddess wanted Odysseus in her bed, he wasn't allowed to say no. It took an order fro",
       "permalink": "https://www.instagram.com/reel/DdCLJ7tAPkp/",
@@ -213,7 +213,7 @@
     {
       "id": "18108185747583891",
       "posted_at": "2026-09-07T17:01:46+0000",
-      "age_h": 292.43,
+      "age_h": 294.33,
       "type": "REELS",
       "hook": "If a Spartan husband couldn't give his wife a child, he brought her a younger man. He just",
       "permalink": "https://www.instagram.com/reel/Dc_mWVcEQDJ/",
@@ -228,7 +228,7 @@
     {
       "id": "18117308009317941",
       "posted_at": "2026-09-06T14:46:49+0000",
-      "age_h": 318.68,
+      "age_h": 320.58,
       "type": "REELS",
       "hook": "How did Rome conquer Britain? EXPLAINED",
       "permalink": "https://www.instagram.com/reel/Dc8yJHqgEs3/",
@@ -243,7 +243,7 @@
     {
       "id": "17939033469358301",
       "posted_at": "2026-09-06T13:08:50+0000",
-      "age_h": 320.32,
+      "age_h": 322.22,
       "type": "REELS",
       "hook": "Could YOU handle an Etruscan dinner party? 🍷",
       "permalink": "https://www.instagram.com/reel/Dc8m001g8fP/",
@@ -258,7 +258,7 @@
     {
       "id": "17907083868535526",
       "posted_at": "2026-09-05T16:05:27+0000",
-      "age_h": 341.37,
+      "age_h": 343.27,
       "type": "REELS",
       "hook": "",
       "permalink": "https://www.instagram.com/reel/Dc6V15wANGN/",
@@ -273,7 +273,7 @@
     {
       "id": "18098440871380086",
       "posted_at": "2026-09-04T17:01:20+0000",
-      "age_h": 364.44,
+      "age_h": 366.34,
       "type": "REELS",
       "hook": "Russian noblewomen queued outside Rasputin's flat every morning - and it was their husband",
       "permalink": "https://www.instagram.com/reel/Dc339h7AJwp/",
@@ -288,7 +288,7 @@
     {
       "id": "18128538664742320",
       "posted_at": "2026-09-04T12:36:19+0000",
-      "age_h": 368.86,
+      "age_h": 370.76,
       "type": "REELS",
       "hook": "Pompeii Was Rome's Playground",
       "permalink": "https://www.instagram.com/reel/Dc3ZdUlgqEk/",
@@ -303,7 +303,7 @@
     {
       "id": "18169152811398720",
       "posted_at": "2026-09-04T11:51:31+0000",
-      "age_h": 369.6,
+      "age_h": 371.5,
       "type": "REELS",
       "hook": "Rome took Gaul, Egypt and the entire Mediterranean… but not Germania. Here's why the Roman",
       "permalink": "https://www.instagram.com/reel/Dc3UcuMggnU/",
@@ -318,7 +318,7 @@
     {
       "id": "18077595179362136",
       "posted_at": "2026-09-04T09:06:32+0000",
-      "age_h": 372.35,
+      "age_h": 374.25,
       "type": "REELS",
       "hook": "Pompeii Was Rome's Playground (and the Graffiti Proves It)",
       "permalink": "https://www.instagram.com/reel/Dc3Bk8tAJH9/",
@@ -333,7 +333,7 @@
     {
       "id": "18102609707590204",
       "posted_at": "2026-09-03T17:01:14+0000",
-      "age_h": 388.44,
+      "age_h": 390.34,
       "type": "REELS",
       "hook": "He burned a city to kill his wife — then she opened her robe and he dropped the sword.",
       "permalink": "https://www.instagram.com/reel/Dc1TLBXgRld/",
@@ -348,7 +348,7 @@
     {
       "id": "18093620504429791",
       "posted_at": "2026-09-03T09:16:22+0000",
-      "age_h": 396.19,
+      "age_h": 398.09,
       "type": "REELS",
       "hook": "Scientists tested bones from a gladiator graveyard in Ephesus, Turkey. Barely any meat. Ba",
       "permalink": "https://www.instagram.com/reel/Dc0dti5gD0l/",
@@ -363,7 +363,7 @@
     {
       "id": "17906076354536524",
       "posted_at": "2026-09-03T08:22:00+0000",
-      "age_h": 397.1,
+      "age_h": 399,
       "type": "REELS",
       "hook": "Could YOU pass Roman army basic training? 🏛️",
       "permalink": "https://www.instagram.com/reel/Dc0XbdLx5_S/",
@@ -378,7 +378,7 @@
     {
       "id": "18130108093737475",
       "posted_at": "2026-09-02T17:01:17+0000",
-      "age_h": 412.44,
+      "age_h": 414.34,
       "type": "REELS",
       "hook": "They say the Empress of Rome took on 25 men in one night. That story is a poem, not histor",
       "permalink": "https://www.instagram.com/reel/DcyuX25AYfJ/",
@@ -393,7 +393,7 @@
     {
       "id": "17900545977573268",
       "posted_at": "2026-09-01T17:01:23+0000",
-      "age_h": 436.44,
+      "age_h": 438.34,
       "type": "REELS",
       "hook": "The Etruscans shared their wives at dinner — and the Greeks never got over it.",
       "permalink": "https://www.instagram.com/reel/DcwJlX6ALev/",
@@ -408,7 +408,7 @@
     {
       "id": "18114188077779838",
       "posted_at": "2026-08-31T17:01:51+0000",
-      "age_h": 460.43,
+      "age_h": 462.33,
       "type": "REELS",
       "hook": "Everyone's talking about Bonnie Blue. Rome had one two thousand years ago, and she was the",
       "permalink": "https://www.instagram.com/reel/Dctk1BGk3qQ/",
@@ -423,7 +423,7 @@
     {
       "id": "17906854371499108",
       "posted_at": "2026-08-31T16:04:47+0000",
-      "age_h": 461.38,
+      "age_h": 463.28,
       "type": "REELS",
       "hook": "German soldiers called them the Night Witches.",
       "permalink": "https://www.instagram.com/reel/DcteRCbhHq6/",
@@ -438,7 +438,7 @@
     {
       "id": "17962791942193064",
       "posted_at": "2026-08-30T17:01:12+0000",
-      "age_h": 484.44,
+      "age_h": 486.34,
       "type": "REELS",
       "hook": "Some historians believe medieval women chose the back door rather than lose their virginit",
       "permalink": "https://www.instagram.com/reel/Dcq_-OlD2ZO/",
@@ -453,7 +453,7 @@
     {
       "id": "17944714743342327",
       "posted_at": "2026-08-29T17:01:23+0000",
-      "age_h": 508.44,
+      "age_h": 510.34,
       "type": "REELS",
       "hook": "The night before her wedding, a medieval bride was told to put leeches inside herself. Not",
       "permalink": "https://www.instagram.com/reel/DcobLuRksC3/",
@@ -468,7 +468,7 @@
     {
       "id": "18192804862344655",
       "posted_at": "2026-08-28T20:49:13+0000",
-      "age_h": 528.64,
+      "age_h": 530.54,
       "type": "REELS",
       "hook": "Charles II of Spain's parents were an uncle and his niece. His grandparents were cousins. ",
       "permalink": "https://www.instagram.com/reel/DcmQdyhCPAr/",
