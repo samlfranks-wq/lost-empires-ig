@@ -541,3 +541,31 @@ it runs 63.5s, well past the 24-32s band that performs here, and predates the cu
 tier. NOT posted - flagged to Sam instead of recut.
 
 Spend: ~0.6cr VO + ~4.5cr stickers.
+
+## 2026-09-19 — WW2 Germany, 32s TikTok cut (was 63s, never on TikTok)
+
+| Field | Value |
+|---|---|
+| File | `map-pipeline/ww2/ww2_tiktok_30s_n.mp4` 32.1s, -13.9 LUFS, cover plate kept at head |
+| Cut | hook (0-5.1) + 1936-1940 (23.0-45.8) + "Speed worked because nobody else used theirs" (51.7-55.8), all on `ww2_tiktok.mp4` timings (+0.333 cover offset vs vo.json). Dropped 1919/1923/1933, 1941 and the closing line |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/caddf6ba-c74f-4c38-9961-1e1d28045a45.mp4 (confirmed) |
+| Insignia | contact sheet at 1fps checked: plain dark fill only |
+| Caption | Germany took most of Europe in a year. Nobody stopped it while stopping it was cheap. #history #ww2 #germany #map #europe |
+| is_aigc | false · no music · public · comments/duet/stitch on |
+| Status | prepare session a2fa3796 opened 19 Sep 20:54 London; the connector now REQUIRES Sam to finish its publish-form widget, Claude cannot call tiktok_publish itself |
+
+## 2026-09-19 — Japan/USSR 32s recut (replaces the 18 Sep 94.5s post)
+
+The 18 Sep post (v_pub_url~v2.7686646976397608993) shipped with three VO faults, found by
+re-transcribing the FINAL with faster-whisper medium.en: 10.3s dead air after "1932"
+(vo.wav 8.5-18.8), a garbled "Zhukov, 99." before the real Zhukov line, and "Striking south,
+into south, into British". vo.json was built from the script so it never showed them.
+**Always whisper the rendered audio, never trust vo.json.** Sam deleting the old post by hand.
+
+| Field | Value |
+|---|---|
+| File | `map-pipeline/nomonhan/nomonhan_32s_n.mp4` 32.3s, -14.0 LUFS |
+| Cut (FINAL timings) | 0-7.4 hook · 34.8-36.97 August 1939 · 38.83-44.0 Zhukov · 69.3-77.47 December 1941 · 81.27-90.6 Pearl Harbor + payoff. 34.8 not earlier: "declares." caption lingers to 34.78 |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/cf774e8f-bf4d-4e2f-bcf9-bdfcaa58c3e9.mp4 (confirmed) |
+| Caption | Japan built an army to invade the Soviet Union. It attacked once, lost in six weeks, and never tried again. #history #japan #ww2 #map |
+| Status | prepare session 6f4ef712 opened 21:15 London, Sam finishes the publish form |
