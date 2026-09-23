@@ -569,3 +569,20 @@ into south, into British". vo.json was built from the script so it never showed 
 | CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/cf774e8f-bf4d-4e2f-bcf9-bdfcaa58c3e9.mp4 (confirmed) |
 | Caption | Japan built an army to invade the Soviet Union. It attacked once, lost in six weeks, and never tried again. #history #japan #ww2 #map |
 | Status | prepare session 6f4ef712 opened 21:15 London, Sam finishes the publish form |
+
+## 2026-09-23 — Why Wasn't Japan Colonized? (Alexander tier; posted by Sam via the publish form)
+
+| Field | Value |
+|---|---|
+| Post | 7688830035049991457 (confirmed on the live profile) |
+| File | `map-pipeline/meiji/meiji_FINAL.mp4` 61.6s, -14.0 LUFS, cover held 1.0s |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/f4609847-3ac5-4d77-8044-9707ed5db97a.mp4 |
+| Caption | Every kingdom in Asia fell to European guns. Japan saw it coming, and in 30 years became an empire itself. #history #japan #meiji #map |
+| is_aigc | false (prefilled; Sam submitted the form) |
+
+The Higgsfield TikTok connector no longer lets Claude call tiktok_publish directly: prepare
+returns a publish-form widget that authorises privately, so Sam has to click publish. The
+form does not hand the publish_id back, so confirm posts on the live profile grid.
+
+Built alongside Siam and Reformation (not yet posted), then three zero-credit builds -
+Kazakhstan, Albania, Andorra - with the Kokoro voice and public-domain portrait medallions.
