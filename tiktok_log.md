@@ -586,3 +586,13 @@ form does not hand the publish_id back, so confirm posts on the live profile gri
 
 Built alongside Siam and Reformation (not yet posted), then three zero-credit builds -
 Kazakhstan, Albania, Andorra - with the Kokoro voice and public-domain portrait medallions.
+
+## 2026-09-25 — The History of Kazakhstan (crisp-line renderer, v2 cover; Sam finishes the publish form)
+
+| Field | Value |
+|---|---|
+| File | `map-pipeline/kazakh/kazakh_FINAL.mp4` 66.4s, cover (v2 "1,400 NUKES") held 1.0s |
+| CDN | https://d2ol7oe51mr4n9.cloudfront.net/user_3E5kpoO7CXWYDEVasBRvd0P7wSt/a90872a2-caa6-4b73-b0ba-0c759447be2f.mp4 (imported from catbox, 206 ok) |
+| Caption | Kazakhstan walked out of the Soviet Union with the 4th largest nuclear arsenal on Earth. #history #kazakhstan #sovietunion #map |
+| is_aigc | false (prefilled) |
+| Status | prepare session 137eeef8 opened 25 Sep, expires 14:29 London; confirm on the live grid |
