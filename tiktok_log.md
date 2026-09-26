@@ -596,3 +596,20 @@ Kazakhstan, Albania, Andorra - with the Kokoro voice and public-domain portrait 
 | Caption | Kazakhstan walked out of the Soviet Union with the 4th largest nuclear arsenal on Earth. #history #kazakhstan #sovietunion #map |
 | is_aigc | false (prefilled) |
 | Status | prepare session 137eeef8 opened 25 Sep, expires 14:29 London; confirm on the live grid |
+
+## 2026-09-26 — Buffer queue (TikTok now scheduled through Buffer, 18:00 London daily)
+
+Queued in Buffer by Claude via Chrome, captions verified on the queue page, AI-Generated off on every post.
+Files: `tiktok-buffer/up/` (re-encoded under Buffer's 10 MB upload cap, 1080x1920).
+
+| Slot (London) | Video | Caption opens |
+|---|---|---|
+| Sat 26 Sep 18:00 | Kazakhstan | Kazakhstan walked out of the Soviet Union... |
+| Sun 27 Sep 18:00 | Albania | Albania's dictator built one concrete bunker... |
+| Mon 28 Sep 18:00 | Andorra | The President of France is also a prince... |
+| Tue 29 Sep 18:00 | Siam | Britain and France carved up all of Southeast Asia... |
+| Wed 30 Sep 18:00 | Reformation | One angry monk split Christian Europe in half... |
+| Thu 1 Oct 18:00 | Israel/Palestine | Four hundred years ago this land had no border... |
+| Fri 2 Oct 18:00 | Rome vs Persia (33s TikTok cut) | Rome conquered everything from Scotland to Egypt... |
+
+Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued. Nomonhan deliberately left out (Sam deleted it).
