@@ -613,3 +613,5 @@ Files: `tiktok-buffer/up/` (re-encoded under Buffer's 10 MB upload cap, 1080x192
 | Fri 2 Oct 18:00 | Rome vs Persia (33s TikTok cut) | Rome conquered everything from Scotland to Egypt... |
 
 Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued. Nomonhan deliberately left out (Sam deleted it).
+
+- 2026-09-28 11:27 BST - Canada "Why is Canada so empty" (map, fx layer v1) - Buffer Publish Now, caption 'Two out of three Canadians live in one thin strip...'
