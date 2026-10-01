@@ -615,3 +615,7 @@ Files: `tiktok-buffer/up/` (re-encoded under Buffer's 10 MB upload cap, 1080x192
 Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued. Nomonhan deliberately left out (Sam deleted it).
 
 - 2026-09-28 11:27 BST - Canada "Why is Canada so empty" (map, fx layer v1) - Buffer Publish Now, caption 'Two out of three Canadians live in one thin strip...'
+
+- 2026-10-01 20:27 BST - Spanish Empire collapse (map, fx v2 + follow card) - Buffer Publish Now
+- 2026-10-01 20:28 BST - Crusades fail (map, fx v2 + follow card) - Buffer Publish Now
+- 2026-10-01 20:29 BST - Yugoslavia collapse (map, fx v2 + follow card) - Buffer Publish Now
