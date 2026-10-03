@@ -80,8 +80,17 @@ if (!due.length) {
 
 // One post per day — hard rule for this account. Burst posting on 27 Aug 2026
 // cost 30x reach (posts 3 and 4 got 4 and 6 views against 179 for post 2).
+// Guard = one post per SCHEDULED day + at least 12 h since the last post (2026-10-03).
+// It used to compare the UTC calendar day of `posted`, so a slot that went out after
+// midnight UTC (late cron, or a catch-up after the 28 Sep token outage) used up the NEXT
+// day's allowance - and every later post slipped a day, for ever (IG ran at ~01:30 London
+// from 30 Sep to 3 Oct). Keying on the slot date and spacing keeps the anti-burst rule but
+// lets a late post stop blocking tomorrow.
 const today = new Date().toISOString().slice(0, 10);
-const alreadyToday = items.find((it) => it.posted && it.posted.slice(0, 10) === today);
+const posts = items.filter((it) => it.posted && typeof it.posted === 'string');
+const lastPost = posts.map((it) => Date.parse(it.posted)).filter(Number.isFinite).sort((a, b) => b - a)[0];
+const tooSoon = lastPost && Date.now() - lastPost < 12 * 3600 * 1000;
+const alreadyToday = posts.find((it) => it.at.slice(0, 10) === today) || (tooSoon && posts.find((it) => Date.parse(it.posted) === lastPost));
 if (alreadyToday) {
   console.log(`Already posted today (${alreadyToday.at}). One per day — stopping.`);
   // Do not let a blocked queue read as a healthy run - see the same guard in
