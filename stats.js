@@ -7,6 +7,7 @@
 // so reach IS cold-audience distribution. Views/reach tells you whether the
 // hook held; interactions/reach tells you whether the content landed.
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {loadEnv, graph} from './lib.js';
 
 const argv = process.argv.slice(2);

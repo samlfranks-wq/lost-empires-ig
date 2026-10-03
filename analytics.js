@@ -14,6 +14,7 @@
 // what fetches the numbers, and stats.json in this public repo is the delivery
 // mechanism. No credential ever leaves the runner.
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {readFileSync, writeFileSync, appendFileSync, existsSync, statSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';

@@ -11,6 +11,7 @@
 // 15 minutes, 9:16 is ideal. The URL must be publicly reachable — our renders
 // on the Higgsfield CDN already qualify.
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {loadEnv, graph, sleep, fail} from './lib.js';
 
 // --- args -------------------------------------------------------------

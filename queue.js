@@ -21,6 +21,7 @@
 //   }
 // ]
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {readFileSync, writeFileSync, existsSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';

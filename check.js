@@ -4,6 +4,7 @@
 //
 //   node check.js
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {loadEnv, graph} from './lib.js';
 
 const env = loadEnv(['IG_ACCESS_TOKEN']); // IG_USER_ID is what we're discovering
