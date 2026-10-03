@@ -13,6 +13,7 @@
 //
 // Nothing is published and nothing is written. This only looks.
 
+import './net.js';   // retry transient network errors (2026-10-03)
 import {readFileSync, existsSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
