@@ -624,3 +624,6 @@ Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued.
 - 2026-10-05 - Czechoslovakia (Wed 7), Sweden WW2 (Thu 8), Siberia (Fri 9), Portuguese Empire (Sat 10), Baghdad (Sun 11) - Buffer 18:00 London, captions verified by counter, AI-Generated off
 - 2026-10-05 - Uruguay (Mon 12), Panama (Tue 13), Singapore (Wed 14) - Buffer 18:00 London, counter-verified, AI-Generated off
 - 2026-10-05 - Netherlands + Austria saved as Buffer DRAFTS: free plan caps scheduled posts at 10; schedule them into 15/16 Oct once slots free (one frees per day)
+- 2026-10-05 - SWAP: Korea -> TikTok Wed 7 Oct 18:00, Italy -> Thu 8 Oct 18:00 (Buffer, counter-verified, AI off). Czechoslovakia and Sweden moved back to Buffer Drafts to free the slots.
+- WARNING: the Korea and Italy entries still sitting in Buffer Drafts are DUPLICATES of the scheduled posts - do not schedule them.
+- Buffer Drafts to schedule as slots free (one a day): Czechoslovakia, Sweden, Netherlands, Austria, Brazil, Vatican, Norway, Bangladesh, Bolivia, Lesotho, Western Australia, Chile, Finland, Mongolia.
