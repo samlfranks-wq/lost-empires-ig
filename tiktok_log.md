@@ -619,3 +619,6 @@ Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued.
 - 2026-10-01 20:27 BST - Spanish Empire collapse (map, fx v2 + follow card) - Buffer Publish Now
 - 2026-10-01 20:28 BST - Crusades fail (map, fx v2 + follow card) - Buffer Publish Now
 - 2026-10-01 20:29 BST - Yugoslavia collapse (map, fx v2 + follow card) - Buffer Publish Now
+
+- 2026-10-04 - Reconquista every year - Buffer scheduled Tue 6 Oct 18:00 London, AI-Generated off
+- 2026-10-05 - Czechoslovakia (Wed 7), Sweden WW2 (Thu 8), Siberia (Fri 9), Portuguese Empire (Sat 10), Baghdad (Sun 11) - Buffer 18:00 London, captions verified by counter, AI-Generated off
