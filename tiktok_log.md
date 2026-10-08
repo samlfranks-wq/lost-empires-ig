@@ -627,3 +627,4 @@ Rome vs Persia's 19 Sep TikTok post is not on the live grid, so it is re-queued.
 - 2026-10-05 - SWAP: Korea -> TikTok Wed 7 Oct 18:00, Italy -> Thu 8 Oct 18:00 (Buffer, counter-verified, AI off). Czechoslovakia and Sweden moved back to Buffer Drafts to free the slots.
 - WARNING: the Korea and Italy entries still sitting in Buffer Drafts are DUPLICATES of the scheduled posts - do not schedule them.
 - Buffer Drafts to schedule as slots free (one a day): Czechoslovakia, Sweden, Netherlands, Austria, Brazil, Vatican, Norway, Bangladesh, Bolivia, Lesotho, Western Australia, Chile, Finland, Mongolia.
+- 2026-10-08 - Belgium v2 remake -> TikTok Thu 15 Oct 18:00 (Buffer, counter-verified, AI off). Buffer More-actions menu would not open, so Siberia stays on 9 Oct.
