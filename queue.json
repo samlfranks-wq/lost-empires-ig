@@ -503,11 +503,11 @@
   },
   {
     "at": "2026-10-10T17:00:00Z",
-    "note": "italy - best-yet build: STRICT layout gate, live swing counter, follow card, 0 credits",
-    "url": "https://files.catbox.moe/sqpkgr.mp4",
-    "cover": "https://files.catbox.moe/zrafq6.jpg",
+    "note": "saxons2 - v2 remake of the 25.9k Anglo-Saxons short: Cliopatria borders, % counter, STRICT gate, follow card",
+    "url": "https://files.catbox.moe/okbsxl.mp4",
+    "cover": "https://files.catbox.moe/l6op4v.jpg",
     "trial": "manual",
-    "caption": "In 1850, Italy was eight different countries. Twenty years later, it was one. Well, almost.\n\nShould Italy have stayed divided? 👇\n\nBorders: Cliopatria / Seshat (CC BY 4.0)\n\n#history #map #italy #garibaldi #risorgimento #historytok #lostempires"
+    "caption": "The English are not from England. They came by boat from Germany and Denmark, and in two hundred years took the best land in Britain.\n\nAre the English really German? 👇\n\nBorders: Cliopatria / Seshat (CC BY 4.0)\n\n#history #map #england #anglosaxons #britain #historytok #lostempires"
   },
   {
     "at": "2026-10-11T17:00:00Z",
@@ -519,11 +519,11 @@
   },
   {
     "at": "2026-10-12T17:00:00Z",
-    "note": "andorra - map pipeline, crisp-line renderer + v2 thumbnail (0 credits)",
-    "url": "https://files.catbox.moe/1nhhwh.mp4",
-    "cover": "https://files.catbox.moe/knhqd5.jpg",
+    "note": "italy - best-yet build: STRICT layout gate, live swing counter, follow card, 0 credits",
+    "url": "https://files.catbox.moe/sqpkgr.mp4",
+    "cover": "https://files.catbox.moe/zrafq6.jpg",
     "trial": "manual",
-    "caption": "The President of France is also a prince, of a tiny country wedged between France and Spain for seven hundred years.\n\n#history #map #andorra #europe #microstates #historytok #lostempires"
+    "caption": "In 1850, Italy was eight different countries. Twenty years later, it was one. Well, almost.\n\nShould Italy have stayed divided? 👇\n\nBorders: Cliopatria / Seshat (CC BY 4.0)\n\n#history #map #italy #garibaldi #risorgimento #historytok #lostempires"
   },
   {
     "at": "2026-10-13T17:00:00Z",
@@ -756,5 +756,13 @@
     "cover": "https://files.catbox.moe/c70zm9.jpg",
     "trial": "manual",
     "caption": "Albania's dictator built one concrete bunker for every four people, for an invasion that never came.\n\n#history #map #albania #coldwar #balkans #historytok #lostempires"
+  },
+  {
+    "at": "2026-11-11T17:00:00Z",
+    "note": "andorra - map pipeline, crisp-line renderer + v2 thumbnail (0 credits)",
+    "url": "https://files.catbox.moe/1nhhwh.mp4",
+    "cover": "https://files.catbox.moe/knhqd5.jpg",
+    "trial": "manual",
+    "caption": "The President of France is also a prince, of a tiny country wedged between France and Spain for seven hundred years.\n\n#history #map #andorra #europe #microstates #historytok #lostempires"
   }
 ]
