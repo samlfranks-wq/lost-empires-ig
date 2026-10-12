@@ -107,12 +107,27 @@ try {
 }
 
 const posts = [];
+const retentionFail = {};
 for (const m of media.data || []) {
   const i = {};
   try {
     const r = await graph(env, `${m.id}/insights`, {params: {metric: METRICS}});
     for (const x of r.data) i[x.name] = x.values?.[0]?.value ?? 0;
   } catch { /* insights lag on brand-new media, and some types have none */ }
+  // Retention, Reels only. Asked separately and one metric per call so an
+  // unsupported one cannot wipe out the core numbers above. avg watch time
+  // comes back in ms; skip rate is the % of plays swiped away in the first 3s.
+  // Added 2026-10-12 to separate "weak opening" from "less distribution"
+  // (Belgium v2 vs v1: same hook line, different cover text).
+  if ((m.media_product_type || '') === 'REELS') {
+    for (const metric of ['ig_reels_avg_watch_time', 'ig_reels_video_view_total_time', 'reels_skip_rate']) {
+      try {
+        const r = await graph(env, `${m.id}/insights`, {params: {metric}});
+        const v = r.data?.[0];
+        if (v) i[metric] = v.values?.[0]?.value ?? v.total_value?.value ?? null;
+      } catch { retentionFail[metric] = (retentionFail[metric] || 0) + 1; }
+    }
+  }
   const caption = m.caption || '';
   posts.push({
     id: m.id,
@@ -128,8 +143,12 @@ for (const m of media.data || []) {
     comments: i.comments ?? 0,
     shares: i.shares ?? 0,
     saves: i.saved ?? 0,
+    avg_watch_s: i.ig_reels_avg_watch_time != null ? Number((i.ig_reels_avg_watch_time / 1000).toFixed(1)) : null,
+    total_watch_h: i.ig_reels_video_view_total_time != null ? Number((i.ig_reels_video_view_total_time / 3.6e6).toFixed(1)) : null,
+    skip_rate: i.reels_skip_rate ?? null,
   });
 }
+if (Object.keys(retentionFail).length) console.log(`retention metrics unavailable on some reels: ${JSON.stringify(retentionFail)}`);
 
 const sum = (k) => posts.reduce((a, p) => a + (p[k] || 0), 0);
 const totals = {
