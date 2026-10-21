@@ -612,11 +612,11 @@
   },
   {
     "at": "2026-10-22T17:00:00Z",
-    "note": "czech - fx v4 (Cliopatria real borders, pop captions v2, follow card), 0 credits",
-    "url": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_czech.mp4",
-    "cover": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_czech_cover.jpg",
+    "note": "trasimene - Blender v7: Libyan + hastatus Higgsfield soldiers, mocap melee, licensed music (Eternal Legion, Pixabay)",
+    "url": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_trasimene.mp4",
+    "cover": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_trasimene_cover.jpg",
     "trial": "manual",
-    "caption": "This country broke in two, and nobody fired a shot. Czechoslovakia from 1918 to 1993, on real historical borders.\n\nShould they have stayed together? 👇\n\nBorders: Cliopatria / Seshat (CC BY 4.0)\n\n#history #map #czechoslovakia #czechia #slovakia #historytok #lostempires"
+    "caption": "In three hours, Rome lost an entire army, and never saw the enemy coming. At Lake Trasimene in 217 BC, Hannibal hid about 50,000 men on the hills above a narrow road. At dawn the fog rolled off the lake, Flaminius marched 25,000 Romans straight in, and the ambush came from the front, the side and behind. 15,000 Romans died. Could Rome have escaped this trap? 👇\n\nNumbers are modern estimates. Sources: Polybius 3.82-85, Livy 22.4-7.\n#history #hannibal #trasimene #ancientrome #romanempire #tactics #lostempires"
   },
   {
     "at": "2026-10-23T17:00:00Z",
@@ -801,5 +801,13 @@
     "cover": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_andorra_cover.jpg",
     "trial": "manual",
     "caption": "The President of France is also a prince, of a tiny country wedged between France and Spain for seven hundred years.\n\n#history #map #andorra #europe #microstates #historytok #lostempires"
+  },
+  {
+    "at": "2026-11-15T17:00:00Z",
+    "note": "czech - fx v4 (Cliopatria real borders, pop captions v2, follow card), 0 credits",
+    "url": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_czech.mp4",
+    "cover": "https://github.com/samlfranks-wq/lost-empires-ig/releases/download/media-queue-le/le_czech_cover.jpg",
+    "trial": "manual",
+    "caption": "This country broke in two, and nobody fired a shot. Czechoslovakia from 1918 to 1993, on real historical borders.\n\nShould they have stayed together? 👇\n\nBorders: Cliopatria / Seshat (CC BY 4.0)\n\n#history #map #czechoslovakia #czechia #slovakia #historytok #lostempires"
   }
 ]
