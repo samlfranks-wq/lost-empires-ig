@@ -61,7 +61,9 @@ async function sourceOk(url) {
     const type = r.headers.get('content-type') || '';
     const len  = Number(r.headers.get('content-length') || 0);
     r.body?.cancel();                                    // headers are enough; drop the stream
-    return /^(video|image)\//.test(type) && len > 100_000;
+    // GitHub release assets come back as application/octet-stream; Instagram accepts them (catbox fallback, 21 Oct).
+    const binary = type.startsWith('application/octet-stream') && /\.(mp4|jpe?g|png)(\?|$)/i.test(url);
+    return (/^(video|image)\//.test(type) || binary) && len > 100_000;
   } catch {
     return false;
   }

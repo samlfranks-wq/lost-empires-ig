@@ -53,7 +53,9 @@ export async function probe(url, kind = 'video') {
   res.body?.cancel();
 
   const want = kind === 'cover' ? /^image\// : /^video\//;
-  if (!want.test(type)) return {ok: false, note: `content-type ${type || 'unknown'}`};
+  // GitHub release assets come back as application/octet-stream; Instagram accepts them (catbox fallback, 21 Oct).
+  const binary = type.startsWith('application/octet-stream') && /\.(mp4|jpe?g|png)(\?|$)/i.test(url);
+  if (!want.test(type) && !binary) return {ok: false, note: `content-type ${type || 'unknown'}`};
   if (total && total < 10_000) return {ok: false, note: `only ${total} bytes — wrong URL?`};
   return {ok: true, note: total ? `${(total / 1e6).toFixed(1)} MB` : 'reachable'};
 }
