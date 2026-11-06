@@ -164,12 +164,31 @@ const totals = {
 totals.eng_rate = totals.reach ? Number(((totals.inter / totals.reach) * 100).toFixed(2)) : null;
 totals.view_per_reach = totals.reach ? Number((totals.views / totals.reach).toFixed(3)) : null;
 
+// ---------- shop funnel (lostempires.pages.dev, the bio link) ----------
+// Public aggregate counts from the visit beacon (no secret needed, no visitor data):
+// page visits and checkout starts, test hits and our own previews already removed.
+// Paid orders are deliberately not published here; read them from /stats or Stripe.
+let shop = null;
+try {
+  const r = await fetch('https://mockup-beacon.samdigital-site.workers.dev/pub', {signal: AbortSignal.timeout(15000)});
+  if (r.ok) {
+    const j = await r.json(), v = j.slugs?.leshop || {}, b = j.slugs?.lebuy || {};
+    shop = {
+      url: 'https://lostempires.pages.dev',
+      visits: v.total ?? 0, visits_24h: v.last_24h ?? 0, visits_7d: v.last_7d ?? 0,
+      visits_from: v.by_from || {}, visits_by_day: v.by_day || {},
+      checkouts: b.total ?? 0, checkouts_7d: b.last_7d ?? 0,
+    };
+  }
+} catch (e) { console.log('shop funnel skipped: ' + e.message); }
+
 const out = {
   platform: 'instagram',
   generated_at: now.toISOString(),
   account,
   account_28d,
   totals,
+  shop,
   posts,
 };
 
@@ -185,12 +204,13 @@ const row = {
   views_28d: account_28d.views ?? null,
   profile_views_28d: account_28d.profile_views ?? null,
   recent: {n: totals.posts, views: totals.views, reach: totals.reach, inter: totals.inter},
+  shop: shop ? {visits: shop.visits, visits_24h: shop.visits_24h, checkouts: shop.checkouts} : null,
 };
 appendFileSync(HIST, JSON.stringify(row) + '\n');
 const lines = readFileSync(HIST, 'utf8').trim().split('\n');
 if (lines.length > HIST_MAX) writeFileSync(HIST, lines.slice(-HIST_MAX).join('\n') + '\n');
 
-console.log(`stats.json written — ${posts.length} posts, ${totals.reach} reach, followers ${account.followers ?? '?'}`);
+console.log(`stats.json written — ${posts.length} posts, ${totals.reach} reach, followers ${account.followers ?? '?'}${shop ? `, shop ${shop.visits} visits / ${shop.checkouts} checkouts` : ''}`);
 
 // ---------- optional human view ----------
 if (has('--print')) {
