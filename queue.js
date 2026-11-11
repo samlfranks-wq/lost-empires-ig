@@ -88,10 +88,10 @@ if (!due.length) {
 // day's allowance - and every later post slipped a day, for ever (IG ran at ~01:30 London
 // from 30 Sep to 3 Oct). Keying on the slot date and spacing keeps the anti-burst rule but
 // lets a late post stop blocking tomorrow.
-// 2026-11-11 (Sam): raised to TWO a day - "we are only posting trial reels so should be all ok". Up to MAX_PER_DAY posts per
+// 2026-11-11 (Sam, later): raised to THREE a day, 13/17/21Z, 3 h min gap - "max without view penalisation". Earlier same day: TWO a day - "we are only posting trial reels so should be all ok". Up to MAX_PER_DAY posts per
 // scheduled day, at least MIN_GAP_H hours since the last post, and never more than MAX_PER_DAY published on one UTC day (so a
-// late catch-up slot cannot stack a third post on top of a full day; a rolling window made every catch-up lag for ever). Slots are 13:00Z + 17:00Z.
-const MAX_PER_DAY = Number(process.env.MAX_PER_DAY || 2);
+// late catch-up slot cannot stack a third post on top of a full day; a rolling window made every catch-up lag for ever). Slots are 13:00Z, 17:00Z, 21:00Z.
+const MAX_PER_DAY = Number(process.env.MAX_PER_DAY || 3);
 const MIN_GAP_H = Number(process.env.MIN_GAP_H || 3);
 const today = new Date().toISOString().slice(0, 10);
 const posts = items.filter((it) => it.posted && typeof it.posted === 'string');
