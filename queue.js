@@ -89,8 +89,8 @@ if (!due.length) {
 // from 30 Sep to 3 Oct). Keying on the slot date and spacing keeps the anti-burst rule but
 // lets a late post stop blocking tomorrow.
 // 2026-11-11 (Sam): raised to TWO a day - "we are only posting trial reels so should be all ok". Up to MAX_PER_DAY posts per
-// scheduled day, at least MIN_GAP_H hours since the last post, and never more than MAX_PER_DAY in any trailing 20 h (so a
-// late catch-up slot cannot stack a third post on top of a full day). Slots are 13:00Z + 17:00Z.
+// scheduled day, at least MIN_GAP_H hours since the last post, and never more than MAX_PER_DAY published on one UTC day (so a
+// late catch-up slot cannot stack a third post on top of a full day; a rolling window made every catch-up lag for ever). Slots are 13:00Z + 17:00Z.
 const MAX_PER_DAY = Number(process.env.MAX_PER_DAY || 2);
 const MIN_GAP_H = Number(process.env.MIN_GAP_H || 3);
 const today = new Date().toISOString().slice(0, 10);
@@ -99,11 +99,11 @@ const postTimes = posts.map((it) => Date.parse(it.posted)).filter(Number.isFinit
 const lastPost = postTimes[0];
 const tooSoon = lastPost && Date.now() - lastPost < MIN_GAP_H * 3600 * 1000;
 const slotToday = posts.filter((it) => it.at.slice(0, 10) === today);
-const recent = postTimes.filter((t) => Date.now() - t < 20 * 3600 * 1000).length;
+const recent = posts.filter((it) => it.posted.slice(0, 10) === today).length;
 const alreadyToday = slotToday.length >= MAX_PER_DAY || recent >= MAX_PER_DAY || tooSoon
   ? (slotToday[0] || posts.find((it) => Date.parse(it.posted) === lastPost)) : null;
 if (alreadyToday) {
-  console.log(`Daily limit reached (${slotToday.length} slot(s) today, ${recent} post(s) in 20 h, last ${lastPost ? new Date(lastPost).toISOString() : '-'}; max ${MAX_PER_DAY}/day, ${MIN_GAP_H} h apart) — stopping.`);
+  console.log(`Daily limit reached (${slotToday.length} slot(s) today, ${recent} published today, last ${lastPost ? new Date(lastPost).toISOString() : '-'}; max ${MAX_PER_DAY}/day, ${MIN_GAP_H} h apart) — stopping.`);
   // Do not let a blocked queue read as a healthy run - see the same guard in
   // yt-publisher/queue.js. A green tick on a no-op is how four days of missed
   // posts went unnoticed.
