@@ -83,7 +83,7 @@ async function main() {
   const now = new Date();
   const overdue = pending.filter((it) => new Date(it.at) <= now);
   if (overdue.length > 1) {
-    console.log(`::warning::${overdue.length} items are overdue. One post per day means this backlog cannot self-clear — rebase the queue dates.`);
+    console.log(`::warning::${overdue.length} items are overdue. With a daily cap, a big backlog clears slowly — rebase the queue dates.`);
   }
 
   const horizon = new Date(now.getTime() + DAYS * 86_400_000);
